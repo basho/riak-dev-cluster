@@ -55,3 +55,4 @@ Depending on your erlang cookie, you may have to use the commands with `sudo`.
 
 * [Erick Dennis](https://github.com/edennis)
 * [Sebastian Röbke](https://github.com/boosty)
+* and other friendly [contributors](https://github.com/xing/riak-dev-cluster/graphs/contributors)
