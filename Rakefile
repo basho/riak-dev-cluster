@@ -15,13 +15,13 @@ task :start do
   (1..3).each do |n|
     sh %{ulimit -n 2048; ./riak#{n}/bin/riak start}
   end
-  puts "======================================="
+  puts "======================================"
   puts "Riak Dev Cluster started"
   puts
   puts "HTTP API: http://127.0.0.1:11098"
   puts
-  puts "Admin UI: https://127.0.0.1:11098/admin"
-  puts "======================================="
+  puts "Admin UI: http://127.0.0.1:11098/admin"
+  puts "======================================"
 end
 
 desc "stop all riak nodes"
