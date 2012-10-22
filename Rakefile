@@ -21,7 +21,6 @@ task :start do
   puts "Riak Dev Cluster started"
   puts
   puts "HTTP API: http://127.0.0.1:11098"
-  puts
   puts "Admin UI: http://127.0.0.1:11098/admin"
   puts "======================================"
 end
