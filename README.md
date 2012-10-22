@@ -1,12 +1,14 @@
 # Riak Dev Cluster for OS X
 
-Easily run a 5-node [Riak](http://wiki.basho.com/Riak.html) cluster on OS X.
+Easily run a [Riak](http://wiki.basho.com/Riak.html) cluster on OS X.
 
-* The names of the nodes are riak[1-5]@127.0.0.1
+* By default, 3 nodes are started
+* The names of the nodes are riak[1-3]@127.0.0.1
 * The HTTP port of riak1 is 11098: <http://127.0.0.1:11098>
 * Riak Control (Admin UI) is available here: <http://127.0.0.1:11098/admin>
 * All nodes use the [eleveldb](http://wiki.basho.com/LevelDB.html) storage backend
   to support [secondary indexes](http://wiki.basho.com/Secondary-Indexes.html)
+* To adjust the number of nodes (1-5), please edit the `NUM_NODES` constant in `Rakefile`
 * Please see riak[1-5]/etc/app.config for the other ports and settings
 
 ## Getting started
