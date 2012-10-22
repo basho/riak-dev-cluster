@@ -4,7 +4,7 @@ RIAKNOSTIC_DOWNLOAD_URL = "https://github.com/downloads/basho/riaknostic/riaknos
 
 # The number of riak nodes to start (1-5, default: 3)
 #
-# If you increase the number for an existing cluster, please use
+# If you increase the number for an existing cluster, use
 #
 #   $ rake bootstrap
 #

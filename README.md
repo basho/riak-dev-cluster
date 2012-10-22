@@ -8,8 +8,8 @@ Easily run a [Riak](http://wiki.basho.com/Riak.html) cluster on OS X.
 * Riak Control (Admin UI) is available here: <http://127.0.0.1:11098/admin>
 * All nodes use the [eleveldb](http://wiki.basho.com/LevelDB.html) storage backend
   to support [secondary indexes](http://wiki.basho.com/Secondary-Indexes.html)
-* To adjust the number of nodes (1-5), please edit the `NUM_NODES` constant in `Rakefile`
-* Please see riak[1-5]/etc/app.config for the other ports and settings
+* To adjust the number of nodes (1-5), edit the `NUM_NODES` constant in `Rakefile`
+* See riak[1-5]/etc/app.config for the other ports and settings
 
 ## Getting started
 
