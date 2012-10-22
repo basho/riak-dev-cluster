@@ -10,7 +10,7 @@ RIAKNOSTIC_DOWNLOAD_URL = "https://github.com/downloads/basho/riaknostic/riaknos
 #
 # afterwards to install and join the additional nodes.
 #
-NUM_NODES = 5
+NUM_NODES = 3
 
 task :default => :help
 
