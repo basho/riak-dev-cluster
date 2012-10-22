@@ -2,8 +2,15 @@ RIAK_VERSION            = "1.2.0"
 RIAK_DOWNLOAD_URL       = "http://s3.amazonaws.com/downloads.basho.com/riak/#{RIAK_VERSION[0..2]}/#{RIAK_VERSION}/osx/10.4/riak-#{RIAK_VERSION}-osx-x86_64.tar.gz"
 RIAKNOSTIC_DOWNLOAD_URL = "https://github.com/downloads/basho/riaknostic/riaknostic-LATEST.tar.gz"
 
-# Number of riak nodes to start (1-5, default: 3)
-NUM_NODES = 3
+# The number of riak nodes to start (1-5, default: 3)
+#
+# If you increase the number for an existing cluster, please use
+#
+#   $ rake bootstrap
+#
+# afterwards to install and join the additional nodes.
+#
+NUM_NODES = 5
 
 task :default => :help
 
