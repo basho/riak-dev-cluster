@@ -24,7 +24,7 @@ task :bootstrap => [:install, :start, :join]
 desc "start all riak nodes"
 task :start do
   (1..NUM_NODES).each do |n|
-    sh %{ulimit -n 2048; ./riak#{n}/bin/riak start}
+    sh %{ulimit -n 2048; ./riak#{n}/bin/riak start || true}
   end
   puts "======================================"
   puts "Riak Dev Cluster started"
@@ -37,7 +37,7 @@ end
 desc "stop all riak nodes"
 task :stop do
   (1..NUM_NODES).each do |n|
-    sh %{ulimit -n 2048; ./riak#{n}/bin/riak stop} rescue "not running"
+    sh %{ulimit -n 2048; ./riak#{n}/bin/riak stop || true}
   end
 end
 
@@ -47,7 +47,7 @@ task :restart => [:stop, :start]
 desc "join riak nodes (only needed once)"
 task :join do
   (2..NUM_NODES).each do |n|
-    sh %{./riak#{n}/bin/riak-admin join -f riak1@127.0.0.1} rescue "already joined"
+    sh %{./riak#{n}/bin/riak-admin join -f riak1@127.0.0.1 || true}
   end
 end
 
