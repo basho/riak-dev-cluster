@@ -77,15 +77,14 @@ task :fetch_riak do
   sh "curl -L #{RIAK_DOWNLOAD_URL} | tar xz -" unless File.exist? "riak-#{RIAK_VERSION}"
 end
 
-task :fetch_riaknostic do
-  sh "curl -L -k #{RIAKNOSTIC_DOWNLOAD_URL} > riaknostic-LATEST.tar.gz"
-  sh "tar xf riaknostic-LATEST.tar.gz" unless File.exist? "riaknostic"
-end
-
 task :copy_riak do
   (1..NUM_NODES).each do |n|
     system %{cp -nr riak-#{RIAK_VERSION}/ riak#{n}}
   end
+end
+
+task :fetch_riaknostic do
+  sh "curl -L #{RIAKNOSTIC_DOWNLOAD_URL} | tar xz -" unless File.exist? "riaknostic"
 end
 
 task :copy_riaknostic do
