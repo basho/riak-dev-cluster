@@ -1,5 +1,5 @@
-RIAK_VERSION      = "1.3.2"
-RIAK_DOWNLOAD_URL = "http://s3.amazonaws.com/downloads.basho.com/riak/#{RIAK_VERSION[0..2]}/#{RIAK_VERSION}/osx/10.8/riak-#{RIAK_VERSION}-osx-x86_64.tar.gz"
+RIAK_VERSION      = "1.4.0"
+RIAK_DOWNLOAD_URL = "http://s3.amazonaws.com/downloads.basho.com/riak/#{RIAK_VERSION[0..2]}/#{RIAK_VERSION}/osx/10.8/riak-#{RIAK_VERSION}-OSX-x86_64.tar.gz"
 RIAKNOSTIC_DOWNLOAD_URL = "https://github.com/downloads/basho/riaknostic/riaknostic-LATEST.tar.gz"
 NUM_NODES = 5
 
@@ -64,6 +64,35 @@ task :ping do
   end
 end
 
+    
+desc "riak-admin member-status"
+    task :member_status do
+     sh %{riak2/bin/riak-admin member-status}
+       end 
+       
+desc "riak-admin test"
+           task :test do
+            sh %{riak1/bin/riak-admin test}
+            sh %{riak2/bin/riak-admin test}
+            sh %{riak3/bin/riak-admin test}
+            sh %{riak4/bin/riak-admin test}
+            sh %{riak5/bin/riak-admin test}
+            end 
+  
+desc "riak-admin status"
+  task :status do
+    sh %{riak1/bin/riak-admin status}
+          end   
+          
+
+desc "riak-admin ring-status"
+  task :ring_status do
+      sh %{riak1/bin/riak-admin ring-status}
+          end   
+          
+          
+          
+  
 task :fetch_riak do
   sh "curl -L #{RIAK_DOWNLOAD_URL} | tar xz -" unless File.exist? "riak-#{RIAK_VERSION}"
 end
