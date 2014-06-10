@@ -1,5 +1,5 @@
-RIAK_VERSION            = "1.4.2"
-RIAK_DOWNLOAD_URL       = "http://s3.amazonaws.com/downloads.basho.com/riak/1.4/1.4.2/osx/10.8/riak-1.4.2-OSX-x86_64.tar.gz"
+RIAK_VERSION            = "1.4.9"
+RIAK_DOWNLOAD_URL       = "http://s3.amazonaws.com/downloads.basho.com/riak/1.4/1.4.9/osx/10.8/riak-1.4.9-OSX-x86_64.tar.gz"
 RIAKNOSTIC_DOWNLOAD_URL = "https://github.com/downloads/basho/riaknostic/riaknostic-LATEST.tar.gz"
 
 # The number of riak nodes to start (1-5, default: 3)
