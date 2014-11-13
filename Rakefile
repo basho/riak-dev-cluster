@@ -3,8 +3,6 @@ RIAK_DOWNLOAD_URL = "http://s3.amazonaws.com/downloads.basho.com/riak/2.0/#{RIAK
 NUM_NODES = 5
 RING_SIZE = 16
 
-#http://s3.amazonaws.com/downloads.basho.com/riak/2.0/2.0.2/osx/10.8/riak-2.0.2-OSX-x86_64.tar.gz
-
 task :default => :help
 
 task :help do
@@ -122,6 +120,7 @@ task :copy_riak do
     system %(sed -i '' 's/127.0.0.1:8098/127.0.0.1:1#{n}098/' riak#{n}/etc/riak.conf)
     system %(sed -i '' 's/127.0.0.1:8087/127.0.0.1:1#{n}087/' riak#{n}/etc/riak.conf)
     system %(echo 'handoff.port = 1#{n}099' >> riak#{n}/etc/riak.conf)
+    system %(echo 'riak_control = on' >> riak#{n}/etc/riak.conf)
     system %(echo 'ring_size = #{RING_SIZE}' >> riak#{n}/etc/riak.conf)
   end
 end
