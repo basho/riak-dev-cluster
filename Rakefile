@@ -2,6 +2,7 @@ RIAK_VERSION      = "2.0.2"
 RIAK_DOWNLOAD_URL = "http://s3.amazonaws.com/downloads.basho.com/riak/2.0/#{RIAK_VERSION}/osx/10.8/riak-#{RIAK_VERSION}-OSX-x86_64.tar.gz"
 NUM_NODES = 5
 RING_SIZE = 16
+BACKEND = 'leveldb' #options: bitcask, leveldb, memory, and multi.
 
 task :default => :help
 
@@ -122,6 +123,7 @@ task :copy_riak do
     system %(echo 'handoff.port = 1#{n}099' >> riak#{n}/etc/riak.conf)
     system %(echo 'riak_control = on' >> riak#{n}/etc/riak.conf)
     system %(echo 'ring_size = #{RING_SIZE}' >> riak#{n}/etc/riak.conf)
+    system %(echo 'storage_backend = #{BACKEND}' >> riak#{n}/etc/riak.conf)
   end
 end
 
