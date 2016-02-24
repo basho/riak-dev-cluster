@@ -1,7 +1,7 @@
 Riak Dev Cluster for OS X
 =========================
 
-*NOTE: This project currently installs Riak 2.1.1*
+*NOTE: This project currently installs Riak 2.1.3*
 
 Easily run a 5-node [Riak](http://www.basho.com/riak) cluster on OS X.
 

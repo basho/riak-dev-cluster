@@ -1,5 +1,5 @@
-RIAK_VERSION      = "2.1.1"
-RIAK_DOWNLOAD_URL = "http://s3.amazonaws.com/downloads.basho.com/riak/2.1/#{RIAK_VERSION}/osx/10.8/riak-#{RIAK_VERSION}-OSX-x86_64.tar.gz"
+RIAK_VERSION      = "2.1.3"
+RIAK_DOWNLOAD_URL = "https://s3.amazonaws.com/downloads.basho.com/riak/2.1/#{RIAK_VERSION}/osx/10.8/riak-#{RIAK_VERSION}-OSX-x86_64.tar.gz"
 NUM_NODES = 5
 RING_SIZE = 16
 BACKEND = 'leveldb' #options: bitcask, leveldb, memory.
@@ -102,7 +102,8 @@ task :counter_bucket do
 end
 
 task :fetch_riak do
-  sh "curl -L #{RIAK_DOWNLOAD_URL} | tar xz -" unless File.exist? "riak-#{RIAK_VERSION}"
+  sh "curl -OL #{RIAK_DOWNLOAD_URL}" unless File.exist? "riak-#{RIAK_VERSION}-OSX-x86_64.tar.gz"
+  sh "shasum -a 256 -c SHA256SUM && tar xzf riak-#{RIAK_VERSION}-OSX-x86_64.tar.gz" unless File.exist? "riak-#{RIAK_VERSION}"
 end
 
 task :copy_riak do
