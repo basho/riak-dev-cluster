@@ -145,6 +145,7 @@ read [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Maintainers
 
+* [Nicholas Bellerophon](https://github.com/nerophon)
 * [Tyler Hannan](https://github.com/tylerhannan)
 
 You can [read the full
@@ -161,7 +162,7 @@ Your contribution is incredibly important to us.
 * [Joel Jacobson](https://github.com/joeljacobson)
 * [Tyler Hannan](https://github.com/tylerhannan)
 
-Copyright (c) 2015 Basho Technologies, Inc.
+Copyright (c) 2016 Basho Technologies, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may
 not use this file except in compliance with the License. You may obtain
