@@ -2,7 +2,7 @@
 
 This repository is **community supported**. We both appreciate and need your contribution to keep it stable. 
 
-Every community supported project at Basho has a maintainer. [Tyler Hannan](https://github.com/tylerhannan) is the maintainer here. For more on how to contribute, [take a look at the contribution process](#how-to-contribute).
+Every community supported project at Basho has a maintainer. [Nicholas Bellerophon](https://github.com/nerophon) and [Tyler Hannan](https://github.com/tylerhannan) are the maintainers here. For more on how to contribute, [take a look at the contribution process](#how-to-contribute).
 
 Thank you for being part of the community! We love you for it. 
 
