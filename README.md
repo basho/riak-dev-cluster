@@ -1,7 +1,7 @@
 Riak Dev Cluster for OS X
 =========================
 
-*NOTE: This project currently installs Riak 2.1.4, but can easily be reconfigured to work with any published OSS version.*
+*NOTE: This project currently installs RiakKV 2.1.4, but can easily be reconfigured to work with any published OSS version of KV or TS.*
 
 Easily run a 5-node [Riak](http://www.basho.com/riak) cluster on OS X.
 
@@ -26,7 +26,7 @@ in a blog post entitled [*Riak Development Anti-Patterns*](http://basho.com/riak
 * Handoff port of riak1 is 11099.
 * https port is off, or same as http port.
 * Riak Control (Admin UI) is available [here](http://127.0.0.1:11098/admin)
-* All nodes use the [LevelDB storage backend](http://docs.basho.com/riak/latest/ops/advanced/backends/leveldb/)
+* All nodes use the [LevelDB storage backend](http://docs.basho.com/riak/latest/ops/advanced/backends/leveldb/) by default
 * [Riak Search](http://docs.basho.com/riak/latest/dev/using/search/) is disabled 
 * The `/etc/riak.conf` in each node's directory enumerates all other
   ports and settings
@@ -129,6 +129,8 @@ And for maps:
 rake map_bucket
 ```
 
+Please note that these commands will only work in RiakKV, as CRDTs are not useful in the context of the immutable data of RiakTS.
+
 ## Other commands
 
 See all available commands by running `rake -T` or just `rake` by itself.
@@ -161,6 +163,7 @@ Your contribution is incredibly important to us.
 * [Seth Thomas](https://github.com/cheeseplus)
 * [Joel Jacobson](https://github.com/joeljacobson)
 * [Tyler Hannan](https://github.com/tylerhannan)
+* [Nicholas Bellerophon](https://github.com/nerophon)
 
 Copyright (c) 2016 Basho Technologies, Inc.
 
